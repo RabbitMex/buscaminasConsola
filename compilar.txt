@@ -1,0 +1,3 @@
+g++ buscaminas1.cpp -o out
+
+g++ buscaminas2.cpp Mensajes.h Mensajes.cpp Parametros.h Parametros.cpp Tableros.h Tableros.cpp -o out

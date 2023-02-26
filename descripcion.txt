@@ -1,0 +1,148 @@
+JUEGO BUSCAMINAS EN CONSOLA.
+
+El siguiente documento muestra como sera el juego BUSCAMINAS
+en la consola.
+
+Al inicio se mostraran los siguientes mensajes.
+-------------------------------------------------------------------------------
+Bienvenido al juego Buscaminas 
+Los niveles son:
+(1) Nivel principiante
+(2) Nivel intermedio
+(3) Nivel Experto
+(4) Nivel personalizado
+
+Ingrese opcion: 1
+El tablero ha sido creado, puede empezar a jugar
+
+El tablero actual es:
+
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+Ingresa la fila y la columna de la casilla a voltear: 3 4
+00000000
+00000000
+00010000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+Ingresa la fila y la columna de la casilla a voltear: 1 1
+10000000
+00000000
+00010000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+Ingresa la fila y la columna de la casilla a voltear: 5 9
+
+Ingresa la fila y la columna de la casilla a voltear: 3 1
+10000000
+00000000
+ 0010000
+00000000
+00000000
+00000000
+00000000
+00000000
+-------------------------------------------------------------------------------
+Nota: las filas y columnas para el usuario comienzan a partir de 1
+Nota: el 1 indica que hay una mina en las casillas vecinas
+Nota: en el caso donde se ingresen datos no validos no se desplegara el tablero
+por lo cual no sera seleccionada ninguna casilla.
+Nota: las casillas con ningun valor significa que ninguna casilla que la 
+rodea tiene mina y las podemos voltear sin problema.
+Nota: si se voltea una mina el juego se pierde.
+
+-------------------------------------------------------------------------------
+
+DETALLES DEL PROYECTO BUSCAMINAS
+- El juego consiste en despejar todas las casillas del tablero que no oculten
+una mina.
+- Algunas casillas tienen un número, este número indica las minas que suman
+todas las casillas vecinas.
+- Así, si una casilla tiene el número 3, significa que de las ocho casillas 
+que hay alrededor (si no es en una esquina o borde de la pantalla o tablero)
+hay 3 minas y 5 sin minas.
+- Si se descubre una casilla sin número indica que ninguna de las casillas 
+vecinas tiene mina.
+- Si se descubre una casilla con una mina se pierde la partida.
+
+-------------------------------------------------------------------------------
+
+NIVELES
+
+- (1) Nivel principiante: 8 x 8 casillas y diez minas.
+- (2) Nivel intermedio: 16 x 16 casillas y 40 minas.
+- (3) Nivel experto: 16 x 30 casillas y 99 minas.
+- (4) Nivel personalizado: en este caso el usuario elige el número de minas y el 
+tamaño de la cuadricula. Se debe de validar que el tamaño máximo del tablero 
+sea 30x30 y que el número máximo de minas es 200.
+
+-------------------------------------------------------------------------------
+
+FUNCIONES 
+
+Una funcion InicializaTablero: permita inicializar el tablero del buscaminas 
+con casillas vacias. El tablero debe ser inicializado de la manera más 
+conveniente para el problema.
+
+El tablero ha sido creado, puede empezar a jugar
+
+El tablero actual es:
+
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+Funcion ColocaMinas: colocar la cantidad de minas dada como parámetro de manera
+aleatoria en el tablero. El carácter que representara a una mina será la 
+letra 'M'.
+
+Funcion ColocaNumeros: coloque en cada casilla donde no hay una mina el número
+de minas que hay en las casillas vecinas. Si la cantidad de minas vecinas sea
+0 se colocará el carácter ' ' blanco o espacio.
+
+Funcion ImprimeTablero: permite imprimir en pantalla el estado del tablero
+al termino de la jugada realizada por el jugador.
+
+Funcion VerificaGandor: determine si el jugador ya ganó el juego o perdió.
+Una forma de verificar ello es, si dodos los espacios que faltan voltear son 
+minas.
+
+Funcion main: que permita desarrollar toda la lógica del juego descrita en la
+pregunta. Dentro de esta funcion deberá invocar de forma obligatoria a todas 
+las funciones implementadas en los puntos anteriores de esta pregunta.
+
+Notas:
+
+Cuando esté jugando e ingrese la fila y columna de la casilla a voltear debe 
+validar que dichas posiciones se encuentren dentro del nivel seleccionado al 
+inicio.
+
+El juego termina si el jugador descubre una mina o si en el tablero solo quedan
+casillas sin descubrir y todas continen solo minas.
+
+Si desea ontener un número entero aleatorio puede invocar a la funcion rand().
+A continuación un ejemplo de invocación a la función:
+srand(time(NULL))
+int aleatorio = rand();
+-------------------------------------------------------------------------------
+

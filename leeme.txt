@@ -1,0 +1,13 @@
+Hay dos programas principales para este proyecto de buscaminas:
+buscaminas1.cpp
+buscaminas2.cpp
+
+buscaminas1.cpp es un programa realizado en un solo archivo, contiene 
+todas las funciones necesarias para que el juego corra correctamente
+asi como la funcion principal main.
+
+buscaminas2.cpp contiene tambien una funcion principal main, pero 
+se crean objetos desde esta funcion, por lo cual ya no se llaman 
+funciones locales, de este modo se organizan los objetos necesarios
+para que el proyecto corra correctamente.
+
